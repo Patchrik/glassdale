@@ -7,7 +7,7 @@
 
 .criminal-card {
 	flex-basis: 30%;
-	border: dashed 2px red;
-	padding: 2px;
-	margin: 2px;
+	border: dashed 1px gray;
+	padding: 5px;
+	margin: 5px;
 }
