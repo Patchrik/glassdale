@@ -1,4 +1,4 @@
-export const CriminalHTML = (CriminalObj) => {
+export const ToCriminalHTML = (CriminalObj) => {
 	return `
     <section section class="criminal-card" id="criminal-id-${CriminalObj.id}" >
       <h1>${CriminalObj.name}</h1>
