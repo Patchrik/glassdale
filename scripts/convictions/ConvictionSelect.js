@@ -3,6 +3,7 @@
  *   which lists all convictions in the Glassdale PD API
  */
 import { useConvictions, getConvictions } from './ConvictionProvider.js';
+import { getOfficers, useOfficers } from '../officers/OfficerProvider.js';
 
 // Get a reference to the DOM element where the <select> will be rendered
 // const contentTarget = document.querySelector('.filters__crime');
@@ -40,6 +41,7 @@ import { useConvictions, getConvictions } from './ConvictionProvider.js';
 */
 const eventHub = document.querySelector('.container');
 const contentTarget = document.querySelector('.filters__crime');
+const officerTarget = document.querySelector('.filters__officer');
 
 // On the event hub, listen for a "change" event.
 eventHub.addEventListener('change', (event) => {
@@ -71,9 +73,45 @@ const render = (convictionsCollection) => {
     `;
 };
 
+const renderOfficer = (OfficerCollection) => {
+	officerTarget.innerHTML = `
+        <select class="dropdown" id="officerSelect">
+            <option value="0">Please select a officer...</option>
+            ${OfficerCollection.map((OfficerObj) => {
+							const OfficerName = OfficerObj.name;
+							const OfficerID = OfficerObj.id;
+							return `<option value="${OfficerName}">${OfficerName}</option>`;
+						})}
+        </select>
+    `;
+};
+
 export const ConvictionSelect = () => {
 	getConvictions().then(() => {
 		const convictions = useConvictions();
 		render(convictions);
 	});
 };
+export const officerSelect = () => {
+	getOfficers().then(() => {
+		const officersArray = useOfficers();
+		renderOfficer(officersArray);
+	});
+};
+
+eventHub.addEventListener('change', (changeEvent) => {
+	if (changeEvent.target.id === 'officerSelect') {
+		// Get the name of the selected officer
+		const selectedOfficer = changeEvent.target.value;
+
+		// Define a custom event
+		const officerSelectedEvent = new CustomEvent('officerSelected', {
+			detail: {
+				officer: selectedOfficer,
+			},
+		});
+
+		// Dispatch event to event hub
+		eventHub.dispatchEvent(officerSelectedEvent);
+	}
+});

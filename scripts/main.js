@@ -6,7 +6,10 @@ import {
 	useConvictions,
 	getConvictions,
 } from './convictions/ConvictionProvider.js';
-import { ConvictionSelect } from './convictions/ConvictionSelect.js';
+import {
+	ConvictionSelect,
+	officerSelect,
+} from './convictions/ConvictionSelect.js';
 import { CriminalList } from './criminals/CriminalList.js';
 
 OfficerList();
@@ -15,3 +18,5 @@ OfficerList();
 CriminalList();
 
 getConvictions().then(ConvictionSelect);
+
+getOfficers().then(officerSelect);

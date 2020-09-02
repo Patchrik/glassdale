@@ -11,3 +11,8 @@
 	padding: 5px;
 	margin: 5px;
 }
+
+.filters {
+	display: flex;
+	flex-direction: row;
+}
