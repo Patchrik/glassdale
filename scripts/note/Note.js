@@ -4,7 +4,7 @@ export const toNotesHTML = (noteObj) => {
       <h1>Note about ${noteObj.suspect}</h1>
 
       <p>${noteObj.noteText} <br>
-      <b>Time of Note:</br> ${new Date(noteObj.date).toLocaleDateString(
+      <b>Time of Note:</b></br> ${new Date(noteObj.date).toLocaleDateString(
 				'en-US'
 			)}</p>
     </section>
