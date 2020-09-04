@@ -1,10 +1,34 @@
 {
   "notes": [
     {
-      "noteText": "This is a placeholder text for notes",
-      "suspect": "This will be a criminals name",
-      "date": "This will be a date",
+      "noteText": "West was acting westy at the corner of 8th and East",
+      "suspect": "Jordane West",
+      "date": 1599223665987,
       "id": 1
+    },
+    {
+      "noteText": "Ubaldo was seen leaving the seen of a double homicide. Need tips on how he got to the scene that fast. Good dude. Likes Cops. ",
+      "suspect": "Ubaldo Wisoky",
+      "date": 1599223729001,
+      "id": 2
+    },
+    {
+      "noteText": "Kelvin is a real POS. Has been since 1st Grade. Fuck Kevin.",
+      "suspect": "Kelvin Haag",
+      "date": 1599223779341,
+      "id": 3
+    },
+    {
+      "noteText": "I put a note in here for Elton because the computer is acting weird.",
+      "suspect": "Elton Hand",
+      "date": 1599223825851,
+      "id": 4
+    },
+    {
+      "noteText": "Gavin said my uniform made me look fat. He's in cell block 3.",
+      "suspect": "Gavin Nienow",
+      "date": 1599223867081,
+      "id": 5
     }
   ]
 }

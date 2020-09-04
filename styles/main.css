@@ -16,3 +16,18 @@
 	display: flex;
 	flex-direction: row;
 }
+
+.note-card {
+	border: dashed 1px gray;
+	padding: 5px;
+	margin: 5px;
+	width: 25%;
+	height: fit-content;
+}
+
+.noteCardContainer {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}

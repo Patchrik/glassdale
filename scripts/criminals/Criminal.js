@@ -1,6 +1,6 @@
 export const ToCriminalHTML = (CriminalObj) => {
 	return `
-    <section section class="criminal-card" id="criminal-id-${CriminalObj.id}" >
+    <section class="criminal-card" id="criminal-id-${CriminalObj.id}" >
       <h1>${CriminalObj.name}</h1>
 
       <p><b>Age:</b> ${CriminalObj.age} <br>
