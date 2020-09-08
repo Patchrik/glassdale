@@ -21,9 +21,6 @@ eventHub.addEventListener('click', (clickEvent) => {
 			window.alert('Make sure to include note and select suspect');
 		}
 	}
-	// if (eventHub.addEventListener('noteStateChanged')) {
-
-	// }
 });
 
 const render = (criminalArray) => {

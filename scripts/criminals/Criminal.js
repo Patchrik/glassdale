@@ -1,3 +1,21 @@
+import { AlibiDialog } from './AlibiDialog.js';
+
+const eventHub = document.querySelector('.container');
+
+eventHub.addEventListener('click', (clickEvent) => {
+	if (clickEvent.target.id.startsWith('associates--')) {
+		const [prefix, criminalID] = event.target.id.split('--');
+
+		const alibiEvent = new CustomEvent('associatesClicked', {
+			detail: {
+				chosenCriminal: criminalID,
+			},
+		});
+
+		eventHub.dispatchEvent(alibiEvent);
+	}
+});
+
 export const ToCriminalHTML = (CriminalObj) => {
 	return `
     <section class="criminal-card" id="criminal-id-${CriminalObj.id}" >
@@ -13,10 +31,7 @@ export const ToCriminalHTML = (CriminalObj) => {
 			).toLocaleDateString('en-US')}</p>
       
       <button id="associates--${CriminalObj.id}">Associate Alibis</button>
-
-      <div class='criminal-card-alibis' id='criminal-id-${
-				CriminalObj.id
-			}'></div>
+      ${AlibiDialog(CriminalObj.id)}
 
     </section>
   `;
