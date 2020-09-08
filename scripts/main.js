@@ -15,6 +15,7 @@ import { getNotes, useNotes } from './note/NoteDataProvider.js';
 import { NoteForm } from './note/NoteForm.js';
 import { NoteList } from './note/NoteList.js';
 import { AlibiDialog } from './criminals/AlibiDialog.js';
+import { WitnessList } from './witness/WitnessList.js';
 
 OfficerList();
 NoteList();
@@ -33,3 +34,5 @@ getOfficers().then(officerSelect);
 NoteForm();
 
 AlibiDialog();
+
+WitnessList();
