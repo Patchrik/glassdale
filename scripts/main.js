@@ -14,6 +14,7 @@ import { CriminalList } from './criminals/CriminalList.js';
 import { getNotes, useNotes } from './note/NoteDataProvider.js';
 import { NoteForm } from './note/NoteForm.js';
 import { NoteList } from './note/NoteList.js';
+import { useAlibis } from './alibi/AlibiProvider.js';
 
 OfficerList();
 NoteList();
