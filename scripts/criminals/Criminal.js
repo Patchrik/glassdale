@@ -4,7 +4,7 @@ const eventHub = document.querySelector('.container');
 
 eventHub.addEventListener('click', (clickEvent) => {
 	if (clickEvent.target.id.startsWith('associates--')) {
-		const [prefix, criminalID] = event.target.id.split('--');
+		const [prefix, criminalID] = clickEvent.target.id.split('--');
 
 		const alibiEvent = new CustomEvent('associatesClicked', {
 			detail: {
