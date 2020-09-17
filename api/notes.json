@@ -2,45 +2,57 @@
   "notes": [
     {
       "noteText": "West was acting westy at the corner of 8th and East",
-      "suspect": "Jordane West",
+      "criminalID": 5,
       "date": 1599223665987,
       "id": 1
     },
     {
       "noteText": "Ubaldo was seen leaving the seen of a double homicide. Need tips on how he got to the scene that fast. Good dude. Likes Cops. ",
-      "suspect": "Ubaldo Wisoky",
+      "criminalID": 16,
       "date": 1599223729001,
       "id": 2
     },
     {
       "noteText": "Kelvin is a real POS. Has been since 1st Grade. Fuck Kevin.",
-      "suspect": "Kelvin Haag",
+      "criminalID": 36,
       "date": 1599223779341,
       "id": 3
     },
     {
       "noteText": "I put a note in here for Elton because the computer is acting weird.",
-      "suspect": "Elton Hand",
+      "criminalID": 34,
       "date": 1599223825851,
       "id": 4
     },
     {
       "noteText": "Gavin said my uniform made me look fat. He's in cell block 3.",
-      "suspect": "Gavin Nienow",
+      "criminalID": 51,
       "date": 1599223867081,
       "id": 5
     },
     {
       "noteText": "Here is a test note about how mine is weird and works",
-      "suspect": "Adrienne Howell",
+      "criminalID": 6,
       "date": 1599247996781,
       "id": 6
     },
     {
       "noteText": "Test",
-      "suspect": "Madelyn Lebsack",
+      "criminalID": 1,
       "date": 1599572075415,
       "id": 7
+    },
+    {
+      "noteText": "Testing Notes now that we're using it by id",
+      "criminalID": 10,
+      "date": 1600369542890,
+      "id": 8
+    },
+    {
+      "noteText": "Heres a good test I think",
+      "criminalID": "18",
+      "date": 1600370367553,
+      "id": 9
     }
   ]
 }

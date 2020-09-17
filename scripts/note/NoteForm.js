@@ -1,5 +1,5 @@
 import { getCriminals, useCriminals } from '../criminals/CriminalProvider.js';
-import { saveNote } from './NoteDataProvider.js';
+import { saveNote, useNotes } from './NoteDataProvider.js';
 
 const contentTarget = document.querySelector('.noteFormContainer');
 const eventHub = document.querySelector('.container');
@@ -12,7 +12,7 @@ eventHub.addEventListener('click', (clickEvent) => {
 		if (noteSuspect.value !== '0' && noteTextArea.value !== '') {
 			const newNote = {
 				noteText: noteTextArea.value,
-				suspect: noteSuspect.value,
+				criminalID: noteSuspect.value,
 				date: Date.now(),
 			};
 
@@ -32,7 +32,7 @@ const render = (criminalArray) => {
           <option value="0">Please select a criminal</option>
           ${criminalArray
 						.map((criminalObj) => {
-							return `<option value="${criminalObj.name}">${criminalObj.name}</option>`;
+							return `<option value="${criminalObj.id}">${criminalObj.name}</option>`;
 						})
 						.join('')}
         </select>
