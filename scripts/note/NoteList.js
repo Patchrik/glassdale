@@ -1,4 +1,4 @@
-import { getNotes, useNotes } from './NoteDataProvider.js';
+import { deleteNote, getNotes, useNotes } from './NoteDataProvider.js';
 import { toNotesHTML } from './Note.js';
 import { getCriminals, useCriminals } from '../criminals/CriminalProvider.js';
 import { NoteForm } from './NoteForm.js';
@@ -11,6 +11,19 @@ const eventHub = document.querySelector('.container');
 eventHub.addEventListener('noteStateChanged', (changeEvent) => {
 	NoteList();
 	NoteForm();
+});
+
+// This is the event that listens for the delete button
+eventHub.addEventListener('click', (clickEvent) => {
+	if (clickEvent.target.id.startsWith('deleteNote--')) {
+		const [throwAway, id] = clickEvent.target.id.split('--');
+
+		deleteNote(id).then((_) => {
+			const updatedNotes = useNotes();
+			const criminals = useCriminals();
+			render(updatedNotes, criminals);
+		});
+	}
 });
 
 // This calls the render method to "list" things onto the Dom.
@@ -44,6 +57,7 @@ const render = (noteCollection, criminalCollection) => {
       		<b>Time of Note:</b> ${new Date(noteObj.date).toLocaleDateString(
 						'en-US'
 					)}</p>
+				<button id="deleteNote--${noteObj.id}">Delete Note?</button>
     	</section>
 		`;
 		})
