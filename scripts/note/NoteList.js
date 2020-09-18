@@ -1,9 +1,17 @@
 import { getNotes, useNotes } from './NoteDataProvider.js';
 import { toNotesHTML } from './Note.js';
 import { getCriminals, useCriminals } from '../criminals/CriminalProvider.js';
+import { NoteForm } from './NoteForm.js';
 
 // We need a NoteList function that will take a note object and render a Note Card element to the dom
 const noteContentTarget = document.querySelector('.noteCardContainer');
+const eventHub = document.querySelector('.container');
+
+// This will re render the notes when it hears a change event
+eventHub.addEventListener('noteStateChanged', (changeEvent) => {
+	NoteList();
+	NoteForm();
+});
 
 // This calls the render method to "list" things onto the Dom.
 export const NoteList = () => {

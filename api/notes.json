@@ -53,6 +53,60 @@
       "criminalID": "18",
       "date": 1600370367553,
       "id": 9
+    },
+    {
+      "noteText": "Test to delete",
+      "criminalID": "11",
+      "date": 1600442984537,
+      "id": 10
+    },
+    {
+      "noteText": "test of dispatch",
+      "criminalID": "13",
+      "date": 1600443166404,
+      "id": 11
+    },
+    {
+      "noteText": "a;lskdfhhags",
+      "criminalID": "1",
+      "date": 1600443268212,
+      "id": 12
+    },
+    {
+      "noteText": ";lasdflhafs",
+      "criminalID": "7",
+      "date": 1600443317448,
+      "id": 13
+    },
+    {
+      "noteText": "something ",
+      "criminalID": "10",
+      "date": 1600443909519,
+      "id": 14
+    },
+    {
+      "noteText": "This shouldn't work\n",
+      "criminalID": "11",
+      "date": 1600444212153,
+      "id": 15
+    },
+    {
+      "noteText": "This should cause an error",
+      "criminalID": "1",
+      "date": 1600444673049,
+      "id": 16
+    },
+    {
+      "noteText": "This shouldn't refresh the page now.",
+      "criminalID": "1",
+      "date": 1600445342517,
+      "id": 17
+    },
+    {
+      "noteText": "test",
+      "criminalID": "1",
+      "date": 1600445923349,
+      "id": 18
     }
   ]
 }
